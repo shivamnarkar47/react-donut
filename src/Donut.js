@@ -22,9 +22,8 @@ top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 font-size:0.875rem;
-color:${rgba('#ffffff',0.5)};
+color:${rgba("white",1)};
 opacity:${({isVisible})=>isVisible?1:0};
-text-align:center;
 transition:opacity 0.25s;
 `;
 
@@ -55,11 +54,12 @@ const activeItem = data.find((obj)=>obj.name === active);
 
 return(
 <Card>
+  <h3>Engagement Group</h3>
   <ChartWrapper>
     <ChartLabel isVisible={mouseOver}>
       {activeItem && activeItem.name}
       <ChartLabelValue>
-        {active !== "" && activeItem.name}
+        {active !== "" && activeItem.value}
       </ChartLabelValue>
     </ChartLabel>
     <PieChart width={210} height={210}>
