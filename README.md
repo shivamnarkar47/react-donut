@@ -1,2 +1,2 @@
-# react-donut
+# react-donut-chart
 Created with CodeSandbox
